@@ -32,7 +32,9 @@ console.log(arrOfTen());
 
 const arrOfNumbers = [1, 4, 5, 69, 54, 32, 111, 70, 98, 62, 17];
 
-const result = arrOfNumbers.filter((number) => number % 2 === 0);
+const result = arrOfNumbers.filter((number) => {
+  number % 2 === 0;
+});
 
 console.log(result);
 
@@ -40,6 +42,15 @@ console.log(result);
   Scrivi una funzione per sommare i numeri contenuti in un array
 */
 
+function sumOfNumbers(arr) {
+  let total = 0;
+  arrOfNumbers.forEach((number) => {
+    total += number;
+  });
+  return total;
+}
+
+console.log(sumOfNumbers(arrOfNumbers));
 /* ESERCIZIO 5 (reduce)
   Scrivi una funzione per sommare i numeri contenuti in un array
 */
@@ -52,11 +63,19 @@ console.log(result);
   Scrivi una funzione che, dato un array di stringhe, ritorni un nuovo array contenente le lunghezze delle rispettive stringhe dell'array di partenza
   es.: ["EPICODE", "is", "great"] => [7, 2, 5]
 */
+const strings = ["EPICODE", "is", "great"];
+
+function lengthOfStrings(arr) {
+  const stringsLength = strings.map((string) => string.length);
+  return stringsLength;
+}
+
+console.log(lengthOfStrings(strings));
 
 /* ESERCIZIO 8 (forEach o for)
   Scrivi una funzione per creare un array contenente tutti i valori DISPARI da 1 a 99.
 */
-
+function oddNumbers() {}
 /* Questo array di film verrà usato negli esercizi a seguire. Non modificarlo e scorri oltre per riprendere gli esercizi :) */
 const movies = [
   {
