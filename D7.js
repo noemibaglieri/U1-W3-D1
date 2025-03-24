@@ -18,7 +18,7 @@ function arrOfTen() {
   let arrOfElements = [];
 
   for (let i = 0; i < 10; i++) {
-    arrOfElements.push(Math.floor(Math.random() * 10));
+    arrOfElements.push(Math.floor(Math.random() * 101));
   }
 
   return arrOfElements;
@@ -59,6 +59,15 @@ console.log(sumOfNumbers(arrOfNumbers));
   Scrivi una funzione che, dato un array di soli numeri e un numero n come parametri, ritorni un secondo array con tutti i valori del precedente incrementati di n
 */
 
+console.log(arrOfNumbers);
+
+const incrementByN = function (array, n) {
+  const incremented = array.map((num) => num + n);
+  return incremented;
+};
+
+console.log(incrementByN(arrOfNumbers, 1));
+
 /* ESERCIZIO 7 (map)
   Scrivi una funzione che, dato un array di stringhe, ritorni un nuovo array contenente le lunghezze delle rispettive stringhe dell'array di partenza
   es.: ["EPICODE", "is", "great"] => [7, 2, 5]
@@ -75,7 +84,18 @@ console.log(lengthOfStrings(strings));
 /* ESERCIZIO 8 (forEach o for)
   Scrivi una funzione per creare un array contenente tutti i valori DISPARI da 1 a 99.
 */
-function oddNumbers() {}
+function oddNumbers() {
+  let arrayOfOddNumbers = [];
+  for (let i = 0; i <= 99; i++) {
+    if (i % 2 !== 0) {
+      arrayOfOddNumbers.push(i);
+    }
+  }
+  return arrayOfOddNumbers;
+}
+
+console.log(oddNumbers());
+
 /* Questo array di film verrà usato negli esercizi a seguire. Non modificarlo e scorri oltre per riprendere gli esercizi :) */
 const movies = [
   {
